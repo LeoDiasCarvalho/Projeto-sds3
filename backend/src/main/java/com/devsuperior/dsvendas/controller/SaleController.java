@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.devsuperior.dsvendas.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;

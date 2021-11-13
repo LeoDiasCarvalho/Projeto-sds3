@@ -14,6 +14,7 @@ import com.devsuperior.dsvendas.entities.Sale;
 import com.devsuperior.dsvendas.repositories.SaleRepository;
 import com.devsuperior.dsvendas.repositories.SellerRepository;
 
+
 /**
  * @author leo_dias
  *
@@ -28,12 +29,12 @@ public class SaleService {
 	@Autowired
 	private SellerRepository sellerRepository;
 	
-	@Transactional(readOnly= true)
+	
+	@Transactional(readOnly = true)
 	public Page<SaleDTO> findAll(Pageable pageable){
 		sellerRepository.findAll();
 		Page<Sale> result = repository.findAll(pageable);
 		return result.map(x -> new SaleDTO(x));
 	}
-	
 	
 }
